@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    attributes:
+      list:
+        name: 店舗名
+        taste: 味
+        price: 金額
+        service: サービス
+        total: 総合点
+  

@@ -1,0 +1,103 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+ja:
+  devise:
+    registrations:
+      new:
+        create new user: ユーザー新規登録
+        email: メールアドレス
+        password: パスワード
+        please enter at least 6 characters: ６字以上記入してください
+        confirm password: パスワード（確認）
+      edit:
+        edit user: ユーザー情報の編集
+        email: メールアドレス
+        password （if you do not change your password, you can leave it blank）: パスワード （パスワードを変更しない場合は空白でも可能です）
+        please enter at least 6 characters: 6 字以上記入してください
+        confirm password: パスワード（確認）
+        old password （if you want to change your infomation, please enter ）: 前のパスワード（情報を変更する場合は入力してください）
+        delete: 削除
+        back: 戻る
+    sessions:
+      new:
+        login: ログイン
+        email: メールアドレス
+        password: パスワード
+        skip to enter password next time: 次回からパスワード入力を省く
+        login from google: Googleからログインする
+  homes:
+    start:
+      Remind delicious memories!!: 美味しい記憶を残しませんか？
+      start: 開始
+  layouts:
+    application: 
+      user name: ユーザー名
+      edit user: ユーザー情報の編集
+      sign out: サインアウト
+      top page: トップページ
+      create new user: 新規ユーザー作成
+      login: ログイン
+  lists:
+    new:
+      new post: 新規投稿
+      name: 店舗名
+      taste: 味
+      price: 金額
+      service: サービス
+      memo: メモ
+      image: 写真
+      total: 総合点
+      back: 投稿一覧へ
+    edit: 
+      edit post: 投稿の編集
+      name: 店舗名
+      taste: 味
+      price: 金額
+      service: サービス
+      memo: メモ
+      image: 写真
+      total: 総合点
+      back: 投稿一覧へ
+    index: 
+      post list: 投稿一覧
+      name: 店舗名
+      taste: 味
+      price: 金額
+      service: サービス
+      memo: メモ
+      image: 写真
+      total: 総合点
+      detail: 詳細
+      edit: 編集
+      delete: 削除
+      new post: 新規投稿
+    show:
+      detail post: 投稿の詳細
+      name: 店舗名
+      taste: 味
+      price: 金額
+      service: サービス
+      memo: メモ
+      image: 写真
+      total: 総合点
+      edit: 編集
+      back: 投稿一覧へ

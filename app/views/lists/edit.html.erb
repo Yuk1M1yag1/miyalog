@@ -1,0 +1,71 @@
+<h1 class="theme"><%= t('.edit post') %></h1>
+<%= link_to t('.back'), lists_path, class: "backbtn" %>
+<div class="editbox">
+<%= form_with model: @list, local: true do |f| %>
+<% if @list.errors.any? %>
+  <h2>入力した内容にエラーが<%= @list.errors.count %>個あります。</h2>
+  <ul>
+    <% @list.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+  <div class="field">
+    <%= f.label :name, t('.name') %> 
+    <%= f.text_field :name %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :taste, t('.taste') %>
+    <span class="star-rating">
+      <%= f.radio_button :taste, "★☆☆☆☆" %><i></i>
+      <%= f.radio_button :taste, "★★☆☆☆" %><i></i>
+      <%= f.radio_button :taste, "★★★☆☆" %><i></i>
+      <%= f.radio_button :taste, "★★★★☆" %><i></i>
+      <%= f.radio_button :taste, "★★★★★" %><i></i>
+    </span>
+  </div>
+  
+  <div class="field">
+    <%= f.label :price, t('.price') %>
+    <span class="star-rating">
+      <%= f.radio_button :price, "★☆☆☆☆" %><i></i>
+      <%= f.radio_button :price, "★★☆☆☆" %><i></i>
+      <%= f.radio_button :price, "★★★☆☆" %><i></i>
+      <%= f.radio_button :price, "★★★★☆" %><i></i>
+      <%= f.radio_button :price, "★★★★★" %><i></i>
+    </span>
+  </div>
+  
+  <div class="field">
+    <%= f.label :service, t('.service') %>
+    <span class="star-rating">
+      <%= f.radio_button :service, "★☆☆☆☆" %><i></i>
+      <%= f.radio_button :service, "★★☆☆☆" %><i></i>
+      <%= f.radio_button :service, "★★★☆☆" %><i></i>
+      <%= f.radio_button :service, "★★★★☆" %><i></i>
+      <%= f.radio_button :service, "★★★★★" %><i></i>
+    </span>
+  </div>
+  
+  <div class="field">
+    <%= f.label :memo, t('.memo') %>
+    <%= f.text_area :memo %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :image, t('.image') %>
+    <%= f.file_field :image %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :total, t('.total') %>
+    <%= f.number_field :total, class: "hoge", min: 0, max: 100 %>/100
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>
+

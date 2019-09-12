@@ -1,0 +1,203 @@
+// Place all the styles related to the lists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.theme {
+  text-align: center;
+}
+.showbtn {  
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #0031d4;
+  background: #40cef5;
+  border-radius: 15px 15px 15px 15px;
+  transition: .4s;
+}
+.showbtn:hover {
+  background: #636363;
+}
+.editbtn {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #067a00;
+  background: #40cef5;
+  border-radius: 15px 15px 15px 15px;
+  transition: .4s;
+}
+.editbtn:hover {
+  background: #636363;
+}
+.deletebtn {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #d40000;
+  background: #40cef5;
+  border-radius: 15px 15px 15px 15px;
+  transition: .4s;
+}
+.deletebtn:hover {
+  background: #636363;
+}
+.newbtn {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #ffffff;
+  background: #40cef5;
+  border-radius: 15px 15px 15px 15px;
+  transition: .4s;
+}
+.newbtn:hover {
+  background: #636363;
+}
+.backbtn {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #858281;
+  background: #40cef5;
+  border-radius: 15px 15px 15px 15px;
+  transition: .4s;
+}
+.backbtn:hover {
+  background: #636363;
+}
+.indexbox {
+    margin: 10px auto 10px auto;
+    max-width: 1080px;
+    text-align: center;
+}
+.showbox, .editbox, .newbox {
+    position: relative;
+    color: white;
+    background-image: url("/bgimg2.png");
+    text-align: center;
+    margin: 10px auto 10px auto;
+    max-width: 1080px;
+    max-height: 100%;
+}
+.memobox {
+  overflow-x: scroll;
+  margin: 0 0 0 30%;
+  width: 450px;
+}
+table{
+  border-collapse:separate;
+  border-spacing: 0;
+  margin: 0 auto 0 auto;
+  max-width: 960px;
+}
+table th:first-child{
+  border-radius: 5px 0 0 0;
+}
+table th:last-child{
+  border-radius: 0 5px 0 0;
+  border-right: 1px solid #ffffff;
+}
+table th{
+  text-align: center;
+  color: #000000;
+  background: linear-gradient(#40cef5, #ffffff);
+  border-left: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+  width: 25%;
+  padding: 10px 0;
+}
+table td{
+  text-align: center;
+  border-left: 1px solid #f2f0f0;
+  border-bottom: 1px solid #f2f0f0;
+  border-top: 1px solid #f2f0f0;
+  box-shadow: 0px -3px 5px 1px #eee inset;
+  width: 25%;
+  padding: 10px 0;
+}
+.memo {
+  overflow-y: scroll;
+  display: block;
+  width: 300px;
+}
+table td:last-child{
+  border-right: 1px solid #ffffff;
+}
+table tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+table tr:last-child td:last-child {
+  border-radius: 0 0 5px 0;
+}
+.star-rating {
+  font-size: 0;
+  white-space: nowrap;
+  display: inline-block;
+  width: 250px;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjREREREREIiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
+  background-size: contain;
+}
+.star-rating i {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 20%;
+  z-index: 1;
+  background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjRkZERjg4IiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
+  background-size: contain;
+}
+.star-rating input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  opacity: 0;
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  position: relative;
+}
+.star-rating input:hover + i, .star-rating input:checked + i {
+  opacity: 1;
+}
+.star-rating i ~ i {
+  width: 40%;
+}
+.star-rating i ~ i ~ i {
+  width: 60%;
+}
+.star-rating i ~ i ~ i ~ i {
+  width: 80%;
+}
+.star-rating i ~ i ~ i ~ i ~ i {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .indexbox {
+    margin: 10px auto 10px auto;
+    max-width: 100%;
+    text-align: center;
+  }
+  .memobox {
+  overflow-y: scroll;
+  text-align: center;
+  }
+}
+

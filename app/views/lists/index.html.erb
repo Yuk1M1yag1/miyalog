@@ -1,0 +1,35 @@
+<h1 class="theme"><%= t('.post list') %></h1>
+<%= link_to t('.new post'), new_list_path, class: "newbtn" %>
+<div class="indexbox">
+<table>
+  <thead>
+    <th><%= t('.name') %></th>
+    <th><%= t('.taste') %></th>
+    <th><%= t('.price') %></th>
+    <th><%= t('.service') %></th>
+    <th><%= t('.memo') %></th>
+    <th><%= t('.image') %></th>
+    <th><%= t('.total') %></th>
+  </thead>
+  <tbody>
+    <% @lists.each do |list| %>
+      <tr>
+        <td><%= list.name %></td>
+        <td><%= list.taste %></td>
+        <td><%= list.price %></td>
+        <td><%= list.service %></td>
+        <td class="memo"><%= list.memo %></td>
+        <td><%= image_tag list.image.to_s %></td>
+        <td><%= list.total %>/100</td>
+        <td><%= link_to t('.detail'), list, class: "showbtn" %></td>
+        <td><%= link_to t('.edit'), edit_list_path(list), class: "editbtn" %></td>
+        <td><%= link_to t('.delete'), list_path(list), method: :delete, data: { confirm: '本当に削除しますか？' }, class: "deletebtn" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @lists %>
+</div>
+
+
+

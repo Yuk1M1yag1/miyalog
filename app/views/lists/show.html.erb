@@ -1,0 +1,47 @@
+<h1 class="theme"><%= t('.detail post') %></h1>
+<%= link_to t('.edit'), edit_list_path, class: "editbtn" %>
+<%= link_to t('.back'), lists_path, class: "backbtn" %>
+<div class="showbox"
+  <p>
+    <strong><%= t('.name') %> :</strong>
+    <%= @list.name %>
+  </p>
+
+  <p>
+    <strong><%= t('.taste') %> :</strong>
+    <%= @list.taste %>
+  </p>
+
+  <p>
+    <strong><%= t('.price') %> :</strong>
+    <%= @list.price %>
+  </p>
+
+  <p>
+    <strong><%= t('.service') %> :</strong>
+    <%= @list.service %>
+  </p>
+
+  <p>
+    <strong><%= t('.memo') %> :</strong>
+    <div class="memobox"><%= @list.memo %></div>
+  </p>
+
+  <p>
+    <strong><%= t('.image') %> :</strong>
+    <%= image_tag @list.image.to_s %>
+  </p>
+
+  <p>
+    <strong><%= t('.total') %> :</strong>
+    <%= @list.total %>/100
+  </p>
+      
+  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2F876e9ee715524fc6bc3fb083d1330919.vfs.cloud9.ap-northeast-1.amazonaws.com%2Flists&layout=button&size=small&width=61&height=20&appId" width="61" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+  <div class="line-it-button" data-lang="ja" data-type="share-a" data-url="https://qiita.com/h3birth" style="display: none;"></div>
+  <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+
+  
+</div>
+<br>

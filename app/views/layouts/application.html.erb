@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>みやログ</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+  <div class="wrapper">
+    <header>
+      <nav>
+        <a href="/index" ><img src="/logo.png" class="icon" ></a>
+        <ul>
+          <% if user_signed_in? %>
+    　       <li><%= t('.user name') %>： <%= current_user.email %></li>
+            <li><%= link_to t('.edit user'), edit_user_registration_path %></li>
+            <li><%= link_to t('.sign out'), destroy_user_session_path %></li>
+  　       <% else %>
+            <li><%= link_to t('.top page'), root_path %></li>
+            <li><%= link_to t('.create new user'), new_user_registration_path %></li>
+            <li><%= link_to t('.login'), new_user_session_path %></li>
+          <% end %>
+          <% if I18n.locale.to_s == "en" %>
+            <li><%= link_to('日本語にする', :locale => 'ja') %></li>
+          <% else %>
+            <li><%= link_to('To English', :locale => 'en') %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </header>
+    <%= yield %>
+    <footer>
+    </footer>
+  </div>
+  </body>
+</html>
