@@ -60,7 +60,7 @@ gem 'devise'
 gem 'image_magick'
 gem 'kaminari', '~> 0.17.0'
 gem 'kaminari-bootstrap', '~> 3.0.1'
-gem 'omniauth'
+gem "omniauth-rails_csrf_protection"
 gem 'omniauth-google-oauth2'
 gem 'rails-i18n'
 gem 'rmagick', '~> 4.0.0'
