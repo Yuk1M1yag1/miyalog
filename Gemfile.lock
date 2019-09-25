@@ -273,6 +273,7 @@ DEPENDENCIES
   kaminari (~> 0.17.0)
   kaminari-bootstrap (~> 3.0.1)
   listen (~> 3.0.5)
+  mini_magick
   omniauth-google-oauth2
   omniauth-rails_csrf_protection
   puma (~> 3.0)

@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class ImagesUploader < CarrierWave::Uploader::Base
-  # Include RMagick or MiniMagick support:
-  
+  #  Include RMagick or MiniMagick support:
+  include CarrierWave::MiniMagick
   process resize_to_fit: [300, 250]
   process convert: 'png'
   # version :thumb do

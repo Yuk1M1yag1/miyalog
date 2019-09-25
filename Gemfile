@@ -63,5 +63,5 @@ gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'omniauth-rails_csrf_protection'
 gem 'omniauth-google-oauth2'
 gem 'rails-i18n'
-
+gem 'mini_magick'
 gem 'rspec_junit_formatter'
