@@ -13,7 +13,7 @@
 * デザイン(Bootstrap)
 * ページネーション（Kaminari）
 * 画像アップロード（carrierwave, MiniMagick, ImageMagick）
-
+* Google Recaptchanによるbot判別
 * ユーザー情報の編集
 * ユーザーによる投稿・詳細閲覧・編集・削除
 * 詳細ページでTwitter・Facebook・LINEでの共有ボタン
