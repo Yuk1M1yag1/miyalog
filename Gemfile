@@ -48,6 +48,8 @@ group :development do
 end
 
 group :production do
+  gem 'mysql2'
+  gem 'mini_racer'
   # gem 'pg'
 end
 
