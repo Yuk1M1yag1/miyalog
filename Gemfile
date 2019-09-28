@@ -65,5 +65,4 @@ gem 'mini_magick'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
 gem 'rails-i18n'
-gem 'recaptcha', require: "recaptcha/rails"
 gem 'rspec_junit_formatter'
