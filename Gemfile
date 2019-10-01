@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-  #gem 'sqlite3'
+  # gem 'sqlite3'
 end
 
 group :development do
@@ -48,9 +48,9 @@ group :development do
 end
 
 group :production do
-  gem 'mysql2', '~> 0.5.2'
   gem 'mini_racer'
-  #gem 'pg'
+  gem 'mysql2', '~> 0.5.2'
+  # gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -62,7 +62,6 @@ gem 'devise'
 gem 'kaminari', '~> 0.17.0'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'mini_magick'
-gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
 gem 'rails-i18n'
 gem 'rspec_junit_formatter'
