@@ -51,4 +51,19 @@ body {
     padding: 0 0 10px 0;
   }
 }
-
+.newbox {
+  font-weight: bold;
+}
+.submit-btn {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #757575;
+  background: #40cef5;
+  transition: .4s;
+}
+.editbox {
+  font-weight: bold;
+}

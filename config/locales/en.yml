@@ -43,10 +43,10 @@ ja:
         email: メールアドレス
         password: パスワード
         skip to enter password next time: 次回からパスワード入力を省く
-        login from google: Googleからログインする
+        or: もしくは
   homes:
     start:
-      Remind delicious memories!!: 美味しい記憶を残しませんか？
+      remind delicious memories!!: 美味しい記憶を残しませんか？
       start: 開始
   layouts:
     application: 

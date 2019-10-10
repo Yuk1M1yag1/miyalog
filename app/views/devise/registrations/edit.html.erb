@@ -14,11 +14,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password, t('.password （if you do not change your password, you can leave it blank）') %> <i></i><br />
+    <%= f.label :password, t('.password （if you do not change your password, you can leave it blank）') %><%= t('.please enter at least 6 characters') %> <i></i><br/>
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
       <br/>
-      <em><%= t('.please enter at least 6 characters') %></em>
     <% end %>
   </div>
 
@@ -31,12 +30,9 @@
     <%= f.label :current_password, t('.old password （if you want to change your infomation, please enter ）') %> <i></i><br/>
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
-
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'submit-btn' %>
   </div>
 <% end %>
 </div>
 <br>
-
-
