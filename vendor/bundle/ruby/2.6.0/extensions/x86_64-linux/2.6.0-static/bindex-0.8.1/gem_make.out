@@ -1,0 +1,15 @@
+current directory: /home/ec2-user/environment/ml/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+/home/ec2-user/.rbenv/versions/2.6.4/bin/ruby -I /home/ec2-user/.rbenv/versions/2.6.4/lib/ruby/2.6.0 -r ./siteconf20191010-4907-17whps1.rb extconf.rb
+creating Makefile
+
+current directory: /home/ec2-user/environment/ml/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/ec2-user/environment/ml/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/ec2-user/environment/ml/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20191010-4907-4t98a9/skiptrace/internal
