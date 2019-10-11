@@ -48,9 +48,9 @@ group :development do
 end
 
 group :production do
-  #gem 'mysql2', '~> 0.5.2'
-  #gem 'mini_racer'
-  #gem 'pg'
+  # gem 'mysql2', '~> 0.5.2'
+  # gem 'mini_racer'
+  # gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
