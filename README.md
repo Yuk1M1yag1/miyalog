@@ -18,7 +18,7 @@
 * 詳細ページでTwitter・Facebook・LINEでの共有ボタン
 * 星デザインの評価
 * モバイルデバイス用のView設定
-* CircleCIによるビルド
+* CircleCIによるビルド,テスト
 * rubocopによる整形
 
 # 環境
