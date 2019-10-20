@@ -47,7 +47,7 @@ ja:
   homes:
     start:
       remind delicious memories!!: 美味しい記憶を残しませんか？
-      start: 開始
+      start: はじめる
   layouts:
     application: 
       user name: ユーザー名
