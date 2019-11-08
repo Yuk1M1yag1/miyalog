@@ -51,6 +51,7 @@ group :production do
   # gem 'mysql2', '~> 0.5.2'
   # gem 'mini_racer'
   # gem 'pg'
+  gem 'unicorn', '~> 5.4.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
