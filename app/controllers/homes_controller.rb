@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
 class HomesController < ApplicationController
-  def start; end
+  def start
+    render :layout => nil
+  end
 end
