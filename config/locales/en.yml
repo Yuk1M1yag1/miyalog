@@ -44,10 +44,6 @@ ja:
         password: パスワード
         skip to enter password next time: 次回からパスワード入力を省く
         or: もしくは
-  homes:
-    start:
-      remind delicious memories!!: 最高の料理を残そう！
-      start: はじめる
   layouts:
     application: 
       user name: ユーザー名
@@ -56,6 +52,7 @@ ja:
       top page: トップページ
       create new user: 新規ユーザー作成
       login: ログイン
+      menu: メニュー
   lists:
     new:
       new post: 新規投稿

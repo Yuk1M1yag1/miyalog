@@ -1,35 +1,39 @@
 <h2 class="theme"><%= t('.edit user') %></h2>
 <%= link_to t('.back'), lists_path, class: "backbtn" %>
-<div class="editbox">
+<div class="user_editbox">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
+  <div class="design_field">
     <%= f.label :email, t('.email') %><br/>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "tf" %>
+    <span class="edit_under_line" ></span>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password, t('.password （if you do not change your password, you can leave it blank）') %><%= t('.please enter at least 6 characters') %> <i></i><br/>
-    <%= f.password_field :password, autocomplete: "new-password" %>
+  <div class="design_field">
+    <%= f.label :password, t('.password （if you do not change your password, you can leave it blank）') %><%= t('.please enter at least 6 characters') %>
+    <%= f.password_field :password, autocomplete: "new-password", class: "tf" %>
     <% if @minimum_password_length %>
-      <br/>
     <% end %>
+    <span class="edit_under_line" ></span>
   </div>
 
-  <div class="field">
+  <div class="design_field">
     <%= f.label :password_confirmation, t('.confirm password') %><br/>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "tf" %>
+    <span class="edit_under_line" ></span>
   </div>
 
-  <div class="field">
-    <%= f.label :current_password, t('.old password （if you want to change your infomation, please enter ）') %> <i></i><br/>
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
+  <div class="design_field">
+    <%= f.label :current_password, t('.old password （if you want to change your infomation, please enter ）') %> 
+    <%= f.password_field :current_password, autocomplete: "current-password", class: "tf" %>
+    <span class="edit_under_line" ></span>
   </div>
+  <br>
   <div class="actions">
     <%= f.submit class: 'submit-btn' %>
   </div>

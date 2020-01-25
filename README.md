@@ -20,7 +20,7 @@
 * 画像アップロード（carrierwave, MiniMagick, ImageMagick）
 * ユーザー情報の編集
 * ユーザーによる投稿・詳細閲覧・編集・削除
-* 詳細ページでTwitter・Facebook・LINEでの共有ボタン
+* 詳細ページでTwitter・Facebookでの共有ボタン
 * 星デザインの評価
 * モバイルデバイス用のView設定
 * CircleCIによるビルド,テスト

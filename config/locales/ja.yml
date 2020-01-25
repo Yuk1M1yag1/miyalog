@@ -7,4 +7,9 @@ ja:
         price: 金額
         service: サービス
         total: 総合点
+      user:
+        current_password: 以前のパスワード
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: 確認用パスワード  
   

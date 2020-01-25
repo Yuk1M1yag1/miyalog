@@ -4,10 +4,13 @@ Rails.application.routes.draw do
   scope '(:locale)', locale: /#{I18n.available_locales.map(&:to_s).join('|')}/ do
   end
 
-  root 'homes#start'
+  devise_scope :user do
+    root :to => "devise/sessions#new"
+  end
 
   get '/index', to: 'lists#index'
   get '/lists', to: 'lists#index'
+  get '/users', to: 'lists#index'
 
   devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks'
