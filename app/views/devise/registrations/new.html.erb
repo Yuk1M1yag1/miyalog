@@ -1,26 +1,29 @@
 <h2 class="theme"><%= t('.create new user') %></h2>
-<div class="newbox">
+<div class="user_newbox">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
+  <div class="design_field">
     <%= f.label :email, t('.email') %><br/>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "tf" %>
+    <span class="edit_under_line" ></span>
   </div>
-
-  <div class="field">
-    <%= f.label :password, t('.password') %><br/>
+  <br>
+  <div class="design_field">
+    <%= f.label :password, t('.password') %>
     <% if @minimum_password_length %>
     <em><%= t('.please enter at least 6 characters') %></em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <% end %><br/>
+    <%= f.password_field :password, autocomplete: "new-password", class: "tf" %>
+    <span class="edit_under_line"></span>
   </div>
-
-  <div class="field">
+  <br>
+  <div class="design_field">
     <%= f.label :password_confirmation, t('.confirm password') %><br/>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "tf" %>
+    <span class="edit_under_line"></span>
   </div>
-  
+  <br>
   <div class="actions">
     <%= f.submit class: 'submit-btn' %>
   </div>

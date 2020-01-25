@@ -1,16 +1,16 @@
 <h1 class="theme"><%= t('.new post') %></h1>
 <%= link_to t('.back'), lists_path, class: "backbtn" %>
-
 <div class="newbox">
-<%= form_with model: @list, local: true do |f| %>
-<% if @list.errors.any? %>
-  <h2>入力した内容にエラーが<%= @list.errors.count %>個あります。</h2>
-  <ul>
-    <% @list.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
+  <div class="board">
+  <%= form_with model: @list, local: true do |f| %>
+  <% if @list.errors.any? %>
+    <ul>
+      <% @list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  
   <div class="field">
     <%= f.label :name, t('.name') %> 
     <%= f.text_field :name %>
@@ -56,16 +56,23 @@
   
   <div class="field">
     <%= f.label :image, t('.image') %>
-    <%= f.file_field :image %>
+    <%= f.file_field :image %> 
   </div>
-  
+  <br>
   <div class="field">
     <%= f.label :total, t('.total') %>
-    <%= f.number_field :total, class: "hoge", min: 0, max: 100 %>/100
+    <%= f.number_field :total, class: "hoge", min: 0, max: 100 %>　/100
   </div>
-  
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
+  
+  <% end %>
+  
+  <div class="chalk"></div>
+  <div class="elaser"></div>
+  <div class="elaser2"></div>
+
+  </div>
 </div>

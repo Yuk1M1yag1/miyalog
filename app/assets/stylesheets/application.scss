@@ -22,49 +22,159 @@ html {
 }
 header {
   padding: 20px;
+  background-color: #404040;
 }
-ul {
-  list-style: none;
+.dropdown {
   float: right;
-  margin-top: 5px;
   color: #40cef5;
-  font-weight: bold;
+  list-style: square;
+  margin-top: 5px;
 }
-li {
-  display: inline;
-  padding: 0 10px;
+.btn-secondary:hover {
+  color: #40cef5;
+}
+.dropdown-menu.show {
+  background-color: #545b62;
+}
+.dropdown-item {
+  color: white;
+  padding: 0 0 1px 0;
+}
+body {
+  background-color: #fff;
 }
 a {
   color: #40cef5;
 }
-body {
-  margin: 0 0 0 0;
+a:hover {
+  color: #40cef5;
 }
-.wrapper {
-  margin: 0 auto 0 auto;
-  max-width: 1080px;
+.design_field {
+	position: relative;
+	width: 80%;
+	margin: 0 10% 0% 10%;
 }
-
-@media (max-width: 767px) {
-  li {
-    display: block;
-    height: 20px;
-    padding: 0 0 10px 0;
-  }
+.design_field input[type='email'], .design_field input[type='password'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	letter-spacing: 1px;
+	padding-left: 4em;
+	text-align: center;
 }
-.newbox {
-  font-weight: bold;
+.design_field input[type='email']:focus, .design_field input[type='password']:focus {
+	outline: none;
 }
-.submit-btn {
-  position: relative;
-  display: inline-block;
-  font-weight: bold;
+.tf {
+	padding: 4px 0;
+	border: 0;
+	border-bottom: 1px solid #1b2538;
+	background-color: transparent;
+}
+.tf ~ .under_line {
+	position: absolute;
+	bottom: 23px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	transition: 0.4s;
+	background-color: #40cef5;
+}
+.tf ~ .edit_under_line {
+  position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	transition: 0.4s;
+	background-color: #40cef5;
+}
+.tf:focus ~ .under_line,
+.design_field.tf ~ .under_line, 
+.tf:focus ~ .edit_under_line,
+.design_field.tf ~ .edit_under_line {
+	width: 100%;
+	transition: 0.4s;
+}
+.tf ~ label {
+	position: absolute;
+	z-index: -1;
+	top: 4px;
+	left: 0;
+	width: 100%;
+	transition: 0.3s;
+	letter-spacing: 0.5px;
+	color: #aaaaaa;
+}
+.tf:focus ~ label, .design_field.tf ~ label {
+	font-size: 12px;
+	top: -16px;
+	transition: 0.3s;
+	color: #40cef5;
+}
+.submit-btn{
   padding: 0.25em 0.5em;
   text-decoration: none;
-  color: #757575;
-  background: #40cef5;
+  color: #40cef5;
+  background: #white;
   transition: .4s;
+  position:relative;
+  height:50px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  border-radius:20px;
 }
-.editbox {
-  font-weight: bold;
+.submit-btn:hover{
+  background:#40cef5;
+  color:#fff;
+}
+.submit-btn:before,.submit-btn:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: white;
+  transition:400ms ease all;
+}
+.submit-btn:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.submit-btn:hover:before,.submit-btn:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+ul {
+  color: red;
+  margin-left: 30%;
+}
+li {
+  margin: 10px 0 0 10px;
+  width: 300px;
+}
+@media (max-width: 767px) {
+  nav {
+    text-align: center;
+  }
+  .dropdown {
+    right: 10px;
+    margin: 20px 30px 0 30px;
+  }
+  a {
+    color: #40cef5;
+  }
+  a:hover {
+    color: #40cef5;
+  }
+  .design_field {
+	  position: relative;
+	  width: 100%;
+  }
 }
