@@ -22,6 +22,7 @@ html {
 }
 header {
   padding: 20px;
+  height: 80px;
   background-color: #404040;
 }
 .dropdown {
@@ -65,13 +66,17 @@ a:hover {
 .design_field input[type='email']:focus, .design_field input[type='password']:focus {
 	outline: none;
 }
-.tf {
+.design_field_label {
+  margin-bottom: -5%;
+  font-weight: 100;
+}
+.df {
 	padding: 4px 0;
 	border: 0;
 	border-bottom: 1px solid #1b2538;
 	background-color: transparent;
 }
-.tf ~ .under_line {
+.df ~ .under_line {
 	position: absolute;
 	bottom: 23px;
 	left: 0;
@@ -80,7 +85,7 @@ a:hover {
 	transition: 0.4s;
 	background-color: #40cef5;
 }
-.tf ~ .edit_under_line {
+.df ~ .edit_under_line {
   position: absolute;
 	bottom: 0;
 	left: 0;
@@ -89,14 +94,14 @@ a:hover {
 	transition: 0.4s;
 	background-color: #40cef5;
 }
-.tf:focus ~ .under_line,
-.design_field.tf ~ .under_line, 
-.tf:focus ~ .edit_under_line,
-.design_field.tf ~ .edit_under_line {
+.df:focus ~ .under_line,
+.design_field.df ~ .under_line, 
+.df:focus ~ .edit_under_line,
+.design_field.df ~ .edit_under_line {
 	width: 100%;
 	transition: 0.4s;
 }
-.tf ~ label {
+.df ~ label {
 	position: absolute;
 	z-index: -1;
 	top: 4px;
@@ -106,13 +111,13 @@ a:hover {
 	letter-spacing: 0.5px;
 	color: #aaaaaa;
 }
-.tf:focus ~ label, .design_field.tf ~ label {
+.df:focus ~ label, .design_field.df ~ label {
 	font-size: 12px;
 	top: -16px;
 	transition: 0.3s;
 	color: #40cef5;
 }
-.submit-btn{
+.submit-btn {
   padding: 0.25em 0.5em;
   text-decoration: none;
   color: #40cef5;
@@ -120,18 +125,19 @@ a:hover {
   transition: .4s;
   position:relative;
   height:50px;
-  font-size:1.6em;
+  font-size: 100%;
   padding:0 2em;
   cursor:pointer;
   transition:800ms ease all;
   outline:none;
   border-radius:20px;
+  width: 30%;
 }
-.submit-btn:hover{
+.submit-btn:hover {
   background:#40cef5;
   color:#fff;
 }
-.submit-btn:before,.submit-btn:after{
+.submit-btn:before,.submit-btn:after {
   content:'';
   position:absolute;
   top:0;
@@ -141,17 +147,17 @@ a:hover {
   background: white;
   transition:400ms ease all;
 }
-.submit-btn:after{
+.submit-btn:after {
   right:inherit;
   top:inherit;
   left:0;
   bottom:0;
 }
-.submit-btn:hover:before,.submit-btn:hover:after{
+.submit-btn:hover:before,.submit-btn:hover:after {
   width:100%;
   transition:800ms ease all;
 }
-ul {
+.errors_ul {
   color: red;
   margin-left: 30%;
 }
@@ -163,9 +169,12 @@ li {
   nav {
     text-align: center;
   }
+  header {
+    height: 110px;
+  }
   .dropdown {
     right: 10px;
-    margin: 20px 30px 0 30px;
+    margin: 10px 30px 0 30px;
   }
   a {
     color: #40cef5;
@@ -175,6 +184,9 @@ li {
   }
   .design_field {
 	  position: relative;
-	  width: 100%;
+	  width: 80%;
+  }
+  .submit-btn {
+    width: 100%;
   }
 }

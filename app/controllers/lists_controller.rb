@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class ListsController < ApplicationController
-  before_action :authenticate_user!
-  PER = 3
+  before_action :authenticate_user! 
+  PER = 4
 
   def index
     @lists = List.page(params[:page]).per(PER)

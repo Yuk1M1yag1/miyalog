@@ -5,27 +5,29 @@
 
   <div class="design_field">
     <%= f.label :email, t('.email') %><br/>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "tf" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "df" %>
     <span class="edit_under_line" ></span>
   </div>
-  <br>
+  
   <div class="design_field">
     <%= f.label :password, t('.password') %>
     <% if @minimum_password_length %>
-    <em><%= t('.please enter at least 6 characters') %></em>
-    <% end %><br/>
-    <%= f.password_field :password, autocomplete: "new-password", class: "tf" %>
+      <em><%= t('.please enter at least 6 characters') %></em>
+    <% end %>
+    <%= f.password_field :password, autocomplete: "new-password", class: "df" %>
     <span class="edit_under_line"></span>
   </div>
-  <br>
+  
   <div class="design_field">
-    <%= f.label :password_confirmation, t('.confirm password') %><br/>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "tf" %>
+    <%= f.label :password_confirmation, t('.confirm password') %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "df" %>
     <span class="edit_under_line"></span>
   </div>
+  
   <br>
+  
   <div class="actions">
     <%= f.submit class: 'submit-btn' %>
   </div>
-</div>
 <% end %>
+</div>

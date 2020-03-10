@@ -10,66 +10,61 @@
   padding: 0.25em 0.5em;
   text-decoration: none;
   color: #0031d4;
-  background: #40cef5;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px 0;
   transition: .4s;
+  border: 1px solid #0031d4
 }
-.showbtn:hover {
-  background: white;
-}
-.editbtn {
+.editbtn, .show_editbtn {
   position: relative;
   display: inline-block;
   padding: 0.25em 0.5em;
   text-decoration: none;
   color: #067a00;
-  background: #40cef5;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px 0;
   transition: .4s;
+  border: 1px solid #067a00
 }
-.editbtn:hover {
-  background: white;
+.show_editbtn {
+  margin-left: 10px;
 }
-
 .deletebtn {
   position: relative;
   display: inline-block;
   padding: 0.25em 0.5em;
   text-decoration: none;
   color: #d40000;
-  background: #40cef5;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px 0;
   transition: .4s;
-}
-.deletebtn:hover {
-  background: white;
+  border: 1px solid #d40000;
 }
 .newbtn {
   position: relative;
   display: inline-block;
   padding: 0.25em 0.5em;
+  margin-left: 1%;
   text-decoration: none;
   color: #ffffff;
   background: #40cef5;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px 0;
   transition: .4s;
-}
-.newbtn:hover {
-  background: white;
 }
 .backbtn {
   position: relative;
   display: inline-block;
   padding: 0.25em 0.5em;
   text-decoration: none;
-  color: #858281;
+  color: #404040;
   background: #40cef5;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px 0;
   transition: .4s;
+  margin: 0 0 15px 10px;
 }
-.backbtn:hover {
+.showbtn:hover, .editbtn:hover, .deletebtn:hover, .newbtn:hover, .backbtn:hover {
+  border: 1px solid  #40cef5;
   background: white;
 }
+
+/* ↓ devise/sessions, registrations */
 .loginbox, .user_newbox, .user_editbox {
   position: relative;
   color: grey;
@@ -77,34 +72,200 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #f7f7f7;
-  margin: 1em 7em;
+  width: 90%;
+  margin-left: 5%;
   position: relative;
   padding: 0.5em 1.5em 4em 1.5em;
-  border-top: solid 1px black;
-  border-bottom: solid 1px black;
+  border-top: solid 1px #40cef5;
+  border-bottom: solid 1px #40cef5;
 }
 .loginbox:before, .loginbox:after,
 .user_newbox:before, .user_newbox:after,
 .user_editbox:before, .user_editbox:after {
-    content: '';
-    position: absolute;
-    top: -10px;
-    width: 0.9px;
-    height: -webkit-calc(100% + 20px);
-    height: calc(100% + 20px);
-    background-color: black;
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 1px;
+  height: -webkit-calc(100% + 20px);
+  height: calc(100% + 20px);
+  background-color: #40cef5;
 }
 .loginbox:before, .user_newbox:before, .user_editbox:before {left: 2%;}
 .loginbox:after, .user_newbox:after, .user_editbox:after {right: 2%;}
 .loginbox p, .user_newbox p, .user_editbox p {
-    margin: 0; 
-    padding: 0;
+  margin: 0; 
+  padding: 0;
+}
+/* ↑ devise/sessions, registrations */
+
+/* ↓ lists/index */
+.pagination-btn {
+  padding: 10px 0 10px 40%;
+  width: 90%;
+}
+.pagination a, .pagination span.gap {
+  float: left;
+  padding: 0 14px;
+  line-height: 38px;
+  text-decoration: none;
+  background-color: white;
+  border: 1px solid #e3e3e3;
+  border-left-width: 0;
+}
+.pagination span.current {
+  float: left;
+  color: #40cef5;
+  padding: 0 10px;
+  line-height: 38px;
+  text-decoration: underline;
+  border: 2px solid #40cef5;
+}
+.pagination {
+  border-left: 1px solid #ddd;
+  .first{
+    padding : 0;
+    float: none;
+    border: none;
+  }
+  .prev {
+    padding : 0;
+    float: none;
+    border: none;
+  }
+  .page{
+    padding : 0;
+    float: none;
+    border: none;
+  }
+  .next{
+    padding : 0;
+    float: none;
+    border: none;
+  }
+  .last{
+    padding : 0;
+    float: none;
+    border: none;
+  }
 }
 .indexbox {
-  margin: 10px auto 10px auto;
-  max-width: 1080px;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 98%;
 }
+.index-showbox { 
+  position: relative;
+  background-repeat: no-repeat;
+  margin: 5px -15px 25px 6%;
+  width: 42%;
+  background-color: #fcfcfc;
+  border: 2px solid #40cef5;
+  border-radius: 10px;
+}
+.index-name_total_boreder {
+  position: relative;
+  margin: 0 10px;
+  padding: 30px 0;
+  border-bottom: solid 1.5px #40cef5;
+}
+.index-name_box {
+  width: 80%;
+  float: left;
+}
+.index-name_strong {
+  color: #757575;
+  float: left;
+  margin: -10px 0 -10px -1px;
+}
+.index-p_name {
+  float: left;
+  font-size: 117%;
+  margin: -16px 50px -16px 58px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 74%;
+}
+.index-total_box {
+  width: 20%;
+  float: right;
+}
+.index-total_strong {
+  color: #757575;
+  float: left;
+  margin: -30px 0 -10px -20px;
+}
+.index-p_total {
+  float: right;
+  font-size: 120%;
+  margin: -13px 1% 0 0;
+}
+.index-taste_price_service_border {
+  position: relative;
+  margin: 10px;
+  padding: 10px;
+  border-bottom: solid 1.5px #40cef5;
+}
+.index-ul_taste_price_service {
+  width: 100%;
+  margin: 10px 0 -35px 0;
+  display: flex;
+}
+.index-li_taste_price_service {
+  width: 38%;
+  margin: -20px 26% 5px -44px;
+}
+.index-taste_strong, .index-service_strong, .index-price_strong {
+  color: #757575;
+  float: left;
+}
+.index-taste_p, .index-price_p, .index-service_p {
+  color: #ffb700;
+  font-size: 120%;
+  margin-left: -10%;
+}
+.index-memo_image_border {
+  text-align: left;
+}
+.index-memo-item {
+  position: relative;
+  margin: 0 10px;
+  padding-bottom: 15px;
+  border-bottom: solid 2px #40cef5;
+}
+.index-memo_strong {
+  color: #757575;
+  float: left;
+  margin: 10px 0 0 20px;
+}
+.index-memobox {
+  margin: 0 0 0 4%;
+  width: 100%;
+  padding: 5px 20px 0 0;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+.index-image_item {
+  margin-top: 10px;
+}
+.index-image_strong {
+  color: #757575;
+  float: left;
+  margin-left: 25px;
+}
+.index-image {
+  padding-left: 3%;
+  padding-top: 15px;
+}
+.index-btn {
+  padding: 0 0 10px 34%;
+}
+/* ↑ lists/index */
+
+/* ↓ lists/show, new, edit */
 .showbox, .editbox, .newbox {
   position: relative;
   background-repeat: no-repeat;
@@ -113,116 +274,160 @@
   max-width: 1080px;
   max-height: 100%;
 }
+.showbox {
+  background-color: #fcfcfc;
+  border: 4px solid #40cef5;
+  border-radius: 10px;
+  width: 87%;
+  margin: 0 0 10px 5%;
+}
+.name_total_boreder {
+  position: relative;
+  margin: 10px;
+  padding: 15px 10px 5% 10px;
+  border-bottom: solid 2px #40cef5;
+}
+.name_box {
+  width: 80%;
+  float: left;
+}
+.name_strong, .total_strong {
+  color: #757575;
+  float: left;
+  margin-top: -15px;
+}
+.p_name {
+  float: left;
+  font-size: 150%;
+}
+.total_box {
+  width: 20%;
+  float: right;
+}
+.p_total {
+  float: right;
+  font-size: 170%;
+  margin: -10px 5% 0 0;
+}
+.taste_price_service_border {
+  position: relative;
+  margin: 0 10px;
+  padding: 0 10px 10px 10px;
+  border-bottom: solid 2px #40cef5;
+}
+.ul_taste_price_service {
+  width: 100%;
+  margin: 10px 0 -20px 0;
+  display: flex;
+}
+.li_taste_price_service {
+  width: 30%;
+  margin: 0 5% -5px 0;
+}
+.taste_strong, .price_strong, .service_strong {
+  color: #757575;
+  float: left;
+  line-height: 1;
+}
+.taste_p, .price_p, .service_p {
+  color: #ffb700;
+  font-size: 235%;
+}
+.memo_image_border {
+  text-align: left;
+}
+.memo-item {
+  position: relative;
+  margin: 10px;
+  padding-bottom: 15px;
+  border-bottom: solid 2px #40cef5;
+}
+.memo_strong {
+  color: #757575;
+  float: left;
+  margin: 10px 0 0 20px;
+  line-height: 1;
+}
 .memobox {
-  overflow-x: scroll;
-  margin: 0 0 0 20%;
-  width: 400px;
+  margin-left: 8%;
+  width: 100%;
+  padding: 30px 15% 10px 0
+}
+.image_item {
+  margin: 10px;
+}
+.image_strong {
+  color: #757575;
+  float: left;
+  margin-left: 25px;
+  line-height: 1;
+}
+.image {
+  margin-left: 38%;
 }
 .board {
   color: white;
   background: #104300;
-  margin: 0 0 10px 0;
+  margin-bottom: 10px;
   padding: 1em 1em 1.5em 1em;
   border: 8px solid #a60;
   box-shadow: 2px 2px 4px #999, 2px 2px 2px #020 inset;
 }
+.label_lists_new-edit {
+  display: block;
+  font-weight: 500;
+}
+/* ↑ lists/show, new, edit */
+
+/* ↓ lists/new */
 .chalk{
   display: block;
-  margin-top: 10px;
-  margin-left: 80%;
-  margin-bottom: -20px;
+  margin: 10px 0 -21px 80%;
   border: solid 2.5px #fff;
   width: 50px;
   border-radius: 5px 0 0 5px;
 }
 .elaser {
   display: block;
-  margin-top: -6px;
-  margin-bottom: 5px;
+  margin: -6px 0 5px 0;
   border: solid 4.5px orange;
   width: 80px;
 }
 .elaser2 {
   display: block;
-  margin-top: -6px;
-  margin-bottom: -25px;
+  margin: -6px 0 -25px 0;
   border: solid 7px darkblue;
   background-color: darkblue;
   width: 80px;
   border-radius: 0 0 4px 4px;
 }
+/* ↑ lists/new  */
+
+/* ↓ lists/edit */
 .chalkII{
   display: block;
-  margin-top: 10px;
-  margin-left: 80%;
-  margin-bottom: -25px;
+  margin: 10px 0 -24px 80%;
   border: solid 2.5px #f55be5;
   width: 50px;
   border-radius: 5px 0 0 5px;
 }
 .elaserII {
   display: block;
-  margin-top: -6px;
-  margin-bottom: 7px;
+  margin: -6px 0 7px 0;
   border: solid 4.5px orange;
   width: 80px;
 }
 .elaser2II {
   display: block;
-  margin-top: -6px;
-  margin-bottom: -46px;
+  margin: -6px 0 -48px 0;
   border: solid 7px darkblue;
   background-color: darkblue;
   width: 80px;
   border-radius: 0 0 4px 4px;
 }
-table{
-  border-collapse:separate;
-  border-spacing: 0;
-  margin: 0 auto 0 auto;
-  max-width: 960px;
-}
-table th:first-child{
-  border-radius: 5px 0 0 0;
-}
-table th:last-child{
-  border-radius: 0 5px 0 0;
-  border-right: 1px solid #ffffff;
-}
-table th{
-  text-align: center;
-  color: #000000;
-  background: linear-gradient(#40cef5, #ffffff);
-  border-left: 1px solid #ffffff;
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
-  box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
-  width: 25%;
-  padding: 10px 0;
-}
-table td{
-  text-align: center;
-  border-left: 1px solid #f2f0f0;
-  border-bottom: 1px solid #f2f0f0;
-  border-top: 1px solid #f2f0f0;
-  box-shadow: 0px -3px 5px 1px #eee inset;
-  width: 25%;
-  padding: 10px 0;
-}
-.memo {
-  overflow-y: scroll;
-  display: block;
-  width: 300px;
-}
-table td:last-child{
-  border-right: 1px solid #ffffff;
-}
-table tr:last-child td:first-child {
-  border-radius: 0 0 0 5px;
-}
-table tr:last-child td:last-child {
-  border-radius: 0 0 5px 0;
-}
+/* ↑ lists/edit */
+
+/* ↓ lists/new, edit */
 .star-rating {
   font-size: 0;
   white-space: nowrap;
@@ -272,6 +477,8 @@ table tr:last-child td:last-child {
 .star-rating i ~ i ~ i ~ i ~ i {
   width: 100%;
 }
+/* ↑ lists/new, edit */
+
 @media (max-width: 767px) {
   .theme {
     padding: 30px 0 10px 0;
@@ -283,16 +490,80 @@ table tr:last-child td:last-child {
     margin:2em 0;
   }
   .indexbox {
-    margin: 10px auto 10px auto;
-    max-width: 100%;
-    text-align: center;
+    margin: 1%;
+    display: block;
+  }
+  .index-showbox { 
+    width: 88%;
+  }
+  .index-name_strong {
+    font-size: 80%;
+    margin-top: -25px;
+  }
+  .index-p_name {
+    font-size: 80%;
+    margin-top: -6px;
+    margin-left: 10px;
+    width: 90%;
+  }
+  .index-total_strong {
+    font-size: 80%;
+    margin-top: -25px;
+  }
+  .index-p_total {
+    font-size: 110%;
+    margin-top: -10px;
+  }
+  .index-li_taste_price_service {
+    margin: -20px 30% 5px -45px;
+  }
+  .index-taste_p, .index-price_p, .index-service_p {
+    font-size: 100%; 
+  }
+  .index-image_tag {
+    width: 85%;
+  }
+  .pagination-btn {
+    padding: 0 0 10px 0;
+    width: 100%;
+    font-size: 80%;
   }
   .memobox {
-    overflow-y: scroll;
     text-align: center;
   }
   .board {
     width: auto;
     margin: 0 -25% 0 -25%;
+  }
+  .name_total_boreder {
+    padding: 0 10px 16% 10px;
+  }
+  .name_strong {
+    font-size: 80%;
+    margin-top: 0%;
+  }
+  .p_name {
+    margin-left: -9%;
+    margin-top: -2%;
+    font-size: 89%;
+    width: 100%;
+  }
+  .total_strong {
+    font-size: 80%;
+    margin-top: -10%;
+  }
+  .p_total {
+    font-size: 130%;
+    margin-top: -6%;
+  }
+  .taste_price_service_border {
+    padding: 0 10px 15px 0;
+  }
+  .li_taste_price_service {
+    margin: 0 14% -5px -25px;
+    width: 30%;
+  }
+  .taste_p, .price_p, .service_p {
+    font-size: 75%;
   }
 }

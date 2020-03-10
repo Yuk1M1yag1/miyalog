@@ -2,33 +2,35 @@
 <div class="loginbox">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   　<div class="design_field">
-    　<%= f.label :email, t('.email') %>
-    　<%= f.email_field :email, autofocus: true, autocomplete: "email", class: "tf" %>
+    　<strong class="design_field_label"><%= f.label :email, t('.email') %></strong>
+    　<%= f.email_field :email, autofocus: true, autocomplete: "email", class: "df" %>
     　<span class="under_line"></span>
   　</div>
 
   　<div class="design_field">
-    　<%= f.label :password, t('.password') %>
-    　<%= f.password_field :password, autocomplete: "current-password", class: "tf" %>
+    　<strong class="design_field_label"><%= f.label :password, t('.password') %></strong>
+    　<%= f.password_field :password, autocomplete: "current-password", class: "df" %>
     　<span class="under_line"></span>
   　</div>
 
-  <% if devise_mapping.rememberable? %>
+    <% if devise_mapping.rememberable? %>
     <div class="field">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me, t('.skip to enter password next time') %>
     </div>
-  <% end %>
+    <% end %>
   
-  <div class="actions">
-    <%= f.submit "Login/ログイン", class: "submit-btn" %>
-  </div>
+    <div class="actions">
+      <%= f.submit "Login/ログイン", class: "submit-btn" %>
+    </div>
 　<% end %>
-<p><%= t('.or') %></p> 
-<br>
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <%= f.hidden_field :email, :value => 'ml@example.com' %>
-  <%= f.hidden_field :password, :value => 'ml@example.com' %>
-  <%= f.submit "ゲストログイン", class: "submit-btn" %>
-<% end %>
+  <p><%= t('.or') %></p> 
+  
+  <br>
+  
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= f.hidden_field :email, :value => 'ml@example.com' %>
+    <%= f.hidden_field :password, :value => 'ml@example.com' %>
+    <%= f.submit "ゲストログイン", class: "submit-btn" %>
+  <% end %>
 </div>

@@ -1,32 +1,57 @@
 <h1 class="theme"><%= t('.post list') %></h1>
 <%= link_to t('.new post'), new_list_path, class: "newbtn" %>
 <div class="indexbox">
-<table>
-  <thead>
-    <th><%= t('.name') %></th>
-    <th><%= t('.taste') %></th>
-    <th><%= t('.price') %></th>
-    <th><%= t('.service') %></th>
-    <th><%= t('.memo') %></th>
-    <th><%= t('.image') %></th>
-    <th><%= t('.total') %></th>
-  </thead>
-  <tbody>
-    <% @lists.each do |list| %>
-      <tr>
-        <td><%= list.name %></td>
-        <td><%= list.taste %></td>
-        <td><%= list.price %></td>
-        <td><%= list.service %></td>
-        <td class="memo"><%= list.memo %></td>
-        <td><%= image_tag list.image.to_s %></td>
-        <td><%= list.total %>/100</td>
-        <td><%= link_to t('.detail'), list, class: "showbtn" %></td>
-        <td><%= link_to t('.edit'), edit_list_path(list), class: "editbtn" %></td>
-        <td><%= link_to t('.delete'), list_path(list), method: :delete, data: { confirm: '本当に削除しますか？' }, class: "deletebtn" %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<%= paginate @lists %>
+  <div class="pagination-btn">
+    <%= paginate @lists, window: 1 %>
+  </div>
+  
+  <% @lists.each do |list| %>
+  <div class="index-showbox">
+    <div class="index-name_total_boreder">
+      <div class="index-name_box">
+        <strong class="index-name_strong"><%= t('.name') %> :</strong>
+          <p class="index-p_name"><%= list.name %></p>
+      </div>
+      <div class="index-total_box">
+        <strong class="index-total_strong"><%= t('.total') %> :</strong>
+          <p class="index-p_total"><%= list.total %>/100</p>
+      </div>
+    </div>
+      
+    <div class="index-taste_price_service_border">
+      <ul class="index-ul_taste_price_service", style="list-style:none;">
+        <li class="index-li_taste_price_service">
+          <strong class="index-taste_strong"><%= t('.taste') %> :</strong>
+            <p class="index-taste_p"><%= list.taste %></p>
+        </li>
+        <li class="index-li_taste_price_service">
+          <strong class="index-price_strong"><%= t('.price') %> :</strong>
+            <p class="index-price_p"><%= list.price %></p>
+        </li>
+        <li class="index-li_taste_price_service">
+          <strong class="index-service_strong"><%= t('.service') %> :</strong>
+            <p class="index-service_p"><%= list.service %></p>
+        </li>
+      </ul>
+    </div>
+      
+    <div class="index-memo_image_border">
+      <div class="index-memo-item">
+        <strong class="index-memo_strong"><%= t('.memo') %> :</strong>
+          <p class="index-memobox"><%= list.memo %></p>
+        <%= link_to t('.see more'), list, class: "index-seemore_btn" %>
+      </div>
+      <div class="index-image_item">
+        <strong class="index-image_strong"><%= t('.image') %> :</strong>
+          <p class="index-image"><%= image_tag list.image.to_s, class: 'index-image_tag' %></p>
+      </div>
+    </div>
+    
+    <div class="index-btn">
+      <%= link_to t('.detail'), list, class: "showbtn" %>
+      <%= link_to t('.edit'), edit_list_path(list), class: "editbtn" %>
+      <%= link_to t('.delete'), list_path(list), method: :delete, data: { confirm: '本当に削除しますか？' }, class: "deletebtn" %>
+    </div>  
+  </div>
+  <% end %>
 </div>

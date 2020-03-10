@@ -17,3 +17,7 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(function(){
+  setTimeout("$('.time_limit').fadeOut('slow')", 4000) 
+})

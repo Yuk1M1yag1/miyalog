@@ -56,23 +56,23 @@ ja:
   lists:
     new:
       new post: 新規投稿
-      name: 店舗名
-      taste: 味
-      price: 金額
-      service: サービス
-      memo: メモ
-      image: 写真
-      total: 総合点
+      name *required: 店舗名 ※必須
+      taste *required: 味 ※必須
+      price *required: 金額 ※必須
+      service *required: サービス ※必須
+      memo *optional: メモ ※任意
+      image *optional: 写真 ※任意
+      total *required: 総合点 ※必須
       back: 投稿一覧へ
     edit: 
       edit post: 投稿の編集
-      name: 店舗名
-      taste: 味
-      price: 金額
-      service: サービス
-      memo: メモ
-      image: 写真
-      total: 総合点
+      name *required: 店舗名 ※必須
+      taste *required: 味 ※必須
+      price *required: 金額 ※必須
+      service *required: サービス ※必須
+      memo *optional: メモ ※任意
+      image *optional: 写真 ※任意
+      total *required: 総合点 ※必須
       back: 投稿一覧へ
     index: 
       post list: 投稿一覧
@@ -81,6 +81,7 @@ ja:
       price: 金額
       service: サービス
       memo: メモ
+      see more: 続きを見る
       image: 写真
       total: 総合点
       detail: 詳細
@@ -88,7 +89,7 @@ ja:
       delete: 削除
       new post: 新規投稿
     show:
-      detail post: 投稿の詳細
+      detail: 投稿の詳細
       name: 店舗名
       taste: 味
       price: 金額
@@ -98,3 +99,5 @@ ja:
       total: 総合点
       edit: 編集
       back: 投稿一覧へ
+      delete: 削除
+  

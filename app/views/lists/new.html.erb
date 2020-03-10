@@ -2,77 +2,80 @@
 <%= link_to t('.back'), lists_path, class: "backbtn" %>
 <div class="newbox">
   <div class="board">
-  <%= form_with model: @list, local: true do |f| %>
-  <% if @list.errors.any? %>
-    <ul>
-      <% @list.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  <% end %>
+    <%= form_with model: @list, local: true do |f| %>
+    <% if @list.errors.any? %>
+      <ul class="errors_ul">
+        <% @list.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    <% end %>
   
-  <div class="field">
-    <%= f.label :name, t('.name') %> 
-    <%= f.text_field :name %>
-  </div>
+    <div class="field">
+      <strong class="label_lists_new-edit"><%= f.label :name, t('.name *required') %></strong> 
+      <%= f.text_field :name %>
+    </div>
   
-  <div class="field">
-    <%= f.label :taste, t('.taste') %>
-    <span class="star-rating">
-      <%= f.radio_button :taste, "★☆☆☆☆" %><i></i>
-      <%= f.radio_button :taste, "★★☆☆☆" %><i></i>
-      <%= f.radio_button :taste, "★★★☆☆" %><i></i>
-      <%= f.radio_button :taste, "★★★★☆" %><i></i>
-      <%= f.radio_button :taste, "★★★★★" %><i></i>
-    </span>
-  </div>
+    <div class="field">
+      <strong class="label_lists_new-edit"><%= f.label :taste, t('.taste *required') %></strong>
+      <span class="star-rating">
+        <%= f.radio_button :taste, 'very-bad' %><i></i>★☆☆☆☆ 
+        <%= f.radio_button :taste, 'bad' %><i></i>★★☆☆☆
+        <%= f.radio_button :taste, 'average' %><i></i>★★★☆☆
+        <%= f.radio_button :taste, 'good' %><i></i>★★★★☆
+        <%= f.radio_button :taste, 'very-good' %><i></i>★★★★★
+      </span>
+    </div>
   
-  <div class="field">
-    <%= f.label :price, t('.price') %>
-    <span class="star-rating">
-      <%= f.radio_button :price, "★☆☆☆☆" %><i></i>
-      <%= f.radio_button :price, "★★☆☆☆" %><i></i>
-      <%= f.radio_button :price, "★★★☆☆" %><i></i>
-      <%= f.radio_button :price, "★★★★☆" %><i></i>
-      <%= f.radio_button :price, "★★★★★" %><i></i>
-    </span>
-  </div>
+    <div class="field">
+      <strong class="label_lists_new-edit"><%= f.label :price, t('.price *required') %></strong>
+      <span class="star-rating">
+        <%= f.radio_button :price, 'very-bad' %><i></i>★☆☆☆☆ 
+        <%= f.radio_button :price, 'bad' %><i></i>★★☆☆☆
+        <%= f.radio_button :price, 'average' %><i></i>★★★☆☆
+        <%= f.radio_button :price, 'good' %><i></i>★★★★☆
+        <%= f.radio_button :price, 'very-good' %><i></i>★★★★★
+      </span>
+    </div>
   
-  <div class="field">
-    <%= f.label :service, t('.service') %>
-    <span class="star-rating">
-      <%= f.radio_button :service, "★☆☆☆☆" %><i></i>
-      <%= f.radio_button :service, "★★☆☆☆" %><i></i>
-      <%= f.radio_button :service, "★★★☆☆" %><i></i>
-      <%= f.radio_button :service, "★★★★☆" %><i></i>
-      <%= f.radio_button :service, "★★★★★" %><i></i>
-    </span>
-  </div>
+    <div class="field">
+      <strong class="label_lists_new-edit"><%= f.label :service, t('.service *required') %></strong>
+      <span class="star-rating">
+        <%= f.radio_button :service, 'very-bad' %><i></i>★☆☆☆☆ 
+        <%= f.radio_button :service, 'bad' %><i></i>★★☆☆☆
+        <%= f.radio_button :service, 'average' %><i></i>★★★☆☆
+        <%= f.radio_button :service, 'good' %><i></i>★★★★☆
+        <%= f.radio_button :service, 'very-good' %><i></i>★★★★★
+      </span>
+    </div>
   
-  <div class="field">
-    <%= f.label :memo, t('.memo') %>
-    <%= f.text_area :memo %>
-  </div>
+    <div class="field">
+      <strong class="label_lists_new-edit"><%= f.label :memo, t('.memo *optional') %></strong>
+      <%= f.text_area :memo %>
+    </div>
   
-  <div class="field">
-    <%= f.label :image, t('.image') %>
-    <%= f.file_field :image %> 
-  </div>
-  <br>
-  <div class="field">
-    <%= f.label :total, t('.total') %>
-    <%= f.number_field :total, class: "hoge", min: 0, max: 100 %>　/100
-  </div>
-  <br>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <strong class="label_lists_new-edit"><%= f.label :image, t('.image *optional') %></strong>
+      <%= f.file_field :image %>
+    </div>
+    
+    <br>
+    
+    <div class="field">
+      <strong class="label_lists_new-edit"><%= f.label :total, t('.total *required') %></strong>
+      <%= f.number_field :total, class: "hoge", min: 0, max: 100 %>　/100
+    </div>
+    
+    <br>
+    
+    <div class="actions">
+      <%= f.submit %>
+    </div>
   
-  <% end %>
+    <% end %>
   
-  <div class="chalk"></div>
-  <div class="elaser"></div>
-  <div class="elaser2"></div>
-
+    <div class="chalk"></div>
+    <div class="elaser"></div>
+    <div class="elaser2"></div>
   </div>
 </div>

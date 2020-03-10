@@ -1,43 +1,46 @@
-<h1 class="theme"><%= t('.detail post') %></h1>
-<%= link_to t('.edit'), edit_list_path, class: "editbtn" %>
+<h1 class="theme"><%= t('.detail') %></h1>
+<%= link_to t('.edit'), edit_list_path, class: "show_editbtn" %>
 <%= link_to t('.back'), lists_path, class: "backbtn" %>
-<div class="showbox"
-  <p>
-    <strong><%= t('.name') %> :</strong>
-    <%= @list.name %>
-  </p>
+<div class="showbox">
+  <div class="name_total_boreder">
+    <div class="name_box">
+      <strong class="name_strong"><%= t('.name') %> :</strong>
+        <p class="p_name"><%= @list.name %></p>
+    </div>
+    <div class="total_box">
+      <strong class="total_strong"><%= t('.total') %> :</strong>
+        <p class="p_total"><%= @list.total %>/100</p>
+    </div>
+  </div>
   
-  <p>
-    <strong><%= t('.taste') %> :</strong>
-    <%= @list.taste %>
-  </p>
+  <div class="taste_price_service_border">
+    <ul class="ul_taste_price_service", style="list-style:none;">
+      <li class="li_taste_price_service">
+        <strong class="taste_strong"><%= t('.taste') %> :</strong>
+          <p class="taste_p"><%= @list.taste %></p>
+      </li>
+      <li class="li_taste_price_service">
+        <strong class="price_strong"><%= t('.price') %> :</strong>
+          <p class="price_p"><%= @list.price %></p>
+      </li>
+      <li class="li_taste_price_service">
+        <strong class="service_strong"><%= t('.service') %> :</strong>
+          <p class="service_p"><%= @list.service %></p>
+      </li>
+    </ul> 
+  </div>  
   
-  <p>
-    <strong><%= t('.price') %> :</strong>
-    <%= @list.price %>
-  </p>
-
-  <p>
-    <strong><%= t('.service') %> :</strong>
-    <%= @list.service %>
-  </p>
-
-  <p>
-    <strong><%= t('.memo') %> :</strong>
-    <div class="memobox"><%= @list.memo %></div>
-  </p>
-
-  <p>
-    <strong><%= t('.image') %> :</strong>
-    <%= image_tag @list.image.to_s %>
-  </p>
-
-  <p>
-    <strong><%= t('.total') %> :</strong>
-    <%= @list.total %>/100
-  </p>
-      
+  <div class="memo_image_border">
+    <div class="memo-item">
+      <strong class="memo_strong"><%= t('.memo') %> :</strong>
+        <p class="memobox"><%= @list.memo %></p>
+    </div>
+    <div class="image_item">
+      <strong class="image_strong"><%= t('.image') %> :</strong>
+        <p class="image"><%= image_tag @list.image.to_s %></p>
+    </div>
+  </div>
   <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2F876e9ee715524fc6bc3fb083d1330919.vfs.cloud9.ap-northeast-1.amazonaws.com%2Flists&layout=button&size=small&width=61&height=20&appId" width="61" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 </div>
-<br>
+
